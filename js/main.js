@@ -9,14 +9,14 @@ class Alumno {
         this.programacion = programacion;
         this.html = html;
         //this.media = media;
-        
+
     }
     notaMedia() {
-       let notaMedia = this.ingles + this.programacion + this.html / 3;
-       //return ["La nota media de " + ${this.nombre} + "es..." + ${this.media}];
+        let notaMedia = this.ingles + this.programacion + this.html / 3;
+        //return ["La nota media de " + ${this.nombre} + "es..." + ${this.media}];
 
-    
-}
+
+    }
 }
 
 const alumno1 = {
@@ -25,10 +25,10 @@ const alumno1 = {
     programacion: 6,
     html: 7,
     notaMedia() {
-       let notaMedia = this.ingles + this.programacion + this.html / 3;
-       return notaMedia 
-       
-}
+        let notaMedia = this.ingles + this.programacion + this.html / 3;
+        return notaMedia
+
+    }
 }
 //console.log(`La nota media de ${alumno1.nombre} es ${alumno1.notaMedia()}`);
 
@@ -46,10 +46,16 @@ console.log(`${this.nombre} "tiene" ${this.media}`);
 //ejercicio 2-------------------------------------------------------------------
 
 const objeto = {
-    name: vestido,
+
     precio: 400,
-    descuento: 10%,
-    
-    let descuentoeneuros = this.objeto.precio * 10 / 100
-    let preciofinal = this.objeto.precio - this.objeto.descuentoeneuros 
-}
+    descuento: 10,
+
+    neto: function () {
+        const aplicarDescuento = (this.precio * this.descuento) / 100;
+        return this.precio - aplicarDescuento;
+    }
+
+};
+console.log(objeto.neto());
+
+
