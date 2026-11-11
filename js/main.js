@@ -148,13 +148,17 @@ function Ficha(nombre, sesiones, numsesiones) {
     this.sesiones = sesiones;
     this.numsesiones = numsesiones;
     this.anotar = function(sesiones, numsesiones) {
-        this.sesiones = sesiones + 1;
+        this.sesiones = sesiones;
         console.log(`sumas ${sesiones} km hoy. en total tienes ${this.sesiones} km recorridos.`);
-        this.numsesiones += numsesiones;
-        console.log(`tienes ${numsesiones} hechas.`);
-    }
-
+        
+        }
+        this.numsesiones = function (numsesiones) {
+            
+        }
 };
+let numsesiones = this.numsesiones;
 const fichaUno = new Ficha("Carlos", 0, 0);
 
-fichaUno.anotar(9);
+fichaUno.anotar(6);
+console.log(fichaUno);
+console.log(`tienes ${numsesiones} hechas.`);
