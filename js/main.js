@@ -1,5 +1,5 @@
 //ejercicio 1---------------------------------------------------------------------
-
+/*
 //objeto para guardar calificaciones
 //el objeto tiene tres materias
 class Alumno {
@@ -44,7 +44,7 @@ console.log(`${this.nombre} "tiene" ${this.media}`);
 
 
 //ejercicio 2-------------------------------------------------------------------
-
+/*
 const objeto = {
 
     precio: 400,
@@ -57,5 +57,36 @@ const objeto = {
 
 };
 console.log(objeto.neto());
+*/
+
+//ejercicio 3--------------------------------------------------------------------
+
+//clase nombre piedra (class o function)
+//con dos propiedades (masa y volumen)
+//con un metodo densidad que calcula masa / volumen
 
 
+class Piedra {
+    constructor(masa, volumen) {
+        this.masa = masa;
+        this.volumen = volumen;
+
+    }
+
+
+calcularDensidad() {
+    return this.masa / this.volumen;
+}
+}
+
+//instanciar un objeto de esta clase dandole valor a su masa y volumen 
+
+const piedraUno = new Piedra(250, 25);
+const piedraDos = new Piedra(333, 12);
+
+//y ejecuta el metodo densidad
+
+const densidad = piedraUno.calcularDensidad();
+
+console.log(`La densidad de la ${piedraUno} es: ${densidad}`);
+console.log(`La densidad de la ${piedraDos} es: ${densidad}`);
